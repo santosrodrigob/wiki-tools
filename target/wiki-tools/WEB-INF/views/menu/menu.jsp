@@ -24,8 +24,14 @@
 								<strong>Lições Apren.</strong>
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		        			<security:authorize access="!isAuthenticated()">
+								<a class="dropdown-item" href="/wiki-tools/licao/open/2">Filtrar</a>
+								<div class="dropdown-divider"></div>
+							</security:authorize>
+		        			<security:authorize access="isAuthenticated()">
 								<a class="dropdown-item" href="/wiki-tools/licao/open/1">Filtrar</a>
 								<div class="dropdown-divider"></div>
+							</security:authorize>
 		        			<security:authorize access="isAuthenticated()">
 								<a class="dropdown-item" href="/wiki-tools/licao/open/0">Novo</a>
 							</security:authorize>

@@ -47,7 +47,7 @@ public class LicaoAprendidaDaoImpl implements LicaoAprendidaDao {
 			query.append("	and ifnull(l.inativo, 0) < ? ");
 		}
 		if(licaoAprendidaDTO.getCodigoUsuario() > 0) {
-			query.append("	and l.codigo_usuario = ? ");
+			query.append("	and l.codigo_tecnico = ? ");
 		} else if(licaoAprendidaDTO.getCodigoReferencia() > 0 && licaoAprendidaDTO.getCodigoSubReferencia() > 0) {
 			query.append(" 	and l.codigo_referencia = ?  ");
 			query.append("	and l.codigo_sub_referencia = ? ");

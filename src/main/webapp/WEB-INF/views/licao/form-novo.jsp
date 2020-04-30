@@ -31,17 +31,17 @@
         		<div class="form-group">
         			<div class="row">
 		        		<div class="col-md-3">
-		        			<label id="cliente">Cliente</label>
+		        			<label id="cliente">Nome do Cliente</label>
 		        			<form:input path="cliente" class="form-control"/>
 		        		</div>
 		        		<div class="col-md-3">
 		        			<label>Técnico</label>
-		        			<form:select path="codigoUsuario" id="codigoUsuario" class="form-control">
+		        			<select name="codigoUsuario" id="codigoUsuario" class="form-control">
 		        				<option value="0">Selecione...</option>
 		        				<c:forEach items="${usuarios }" var="item">
-			        				<form:option value="${item.codigoUsuario}" >${item.usuario}</form:option>
+			        				<option value="${item.codigoUsuario}" ${item.codigoUsuario == usuario.codigoUsuario ? 'selected' : '' } >${item.usuario}</option>
 		        				</c:forEach>
-		        			</form:select>
+		        			</select>
 		        			<form:errors path="codigoUsuario" class="errors"/>
 		        		</div>
 		        		<div class="col-md-3">

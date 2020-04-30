@@ -46,7 +46,9 @@ public class LicaoAprendidaController {
 		Connection connection = null;
 		
 		ModelAndView modelAndView = null;
-		if(1==tipo) {
+		if(2==tipo) {
+			 modelAndView = new ModelAndView("licao/filtrar");
+		} else if(1==tipo) {
 			 modelAndView = new ModelAndView("licao/filtrar");
 
 			 IndexLogin indexLogin = new IndexLogin();
