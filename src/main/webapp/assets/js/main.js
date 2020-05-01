@@ -137,7 +137,6 @@
 			errors.addClass('alertErrors');
 		}
 	}
-
 	
 	$('#pesquisa').click(function(){
 		filtrar();

@@ -2,25 +2,18 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
-<spring:url value="/assets" var="assets"></spring:url>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="tags" %>
 <c:url value="/referencia/lista-referencia" var="gravar"></c:url>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Cadastro - Referencia</title>
+<tags:pageTemplate titulo="Cadastrar - Referências">
 
-	    <link href="${assets }/plugins/bootstrap-4.4.1-dist/css/bootstrap.min.css.map"/>
-	    <link href="${assets }/plugins/bootstrap-4.4.1-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	    <link href="${assets }/css/principal.css" rel="stylesheet" type="text/css" />
-    </head>
-    <body>
-        <header>
-			<c:import url="../menu/menu.jsp"></c:import>
-		</header>
-
+<jsp:attribute name="extraScripts">
+	<script>
+	    $("input[type=text]").first().focus();
+	</script>
+</jsp:attribute>
+	
+	<jsp:body>
 		<div class="title">
 			<h3>Cadastro - Referência</h3>
 		</div>
@@ -46,12 +39,5 @@
         		</div>
         	</form:form>
 		</main>
-
-        <footer>
-            <p class="copyright"><!--&copy; Copyright Wiki Tools - 2020  --></p>
-        </footer>
-    </body>
-    <script src="${assets }/js/jquery-3.5.0.min.js" type="text/javascript" ></script>
-    <script src="${assets }/plugins/bootstrap-4.4.1-dist/js/bootstrap.min.js" type="text/javascript" ></script>
-    <script src="${assets }/js/main.js" type="text/javascript" ></script>
-</html>
+	</jsp:body>
+</tags:pageTemplate>
