@@ -1,3 +1,7 @@
+/**
+ * @author RodrigoBorges.
+ * @date 01/04/2020
+ */
 package br.com.tools.validate;
 
 import org.springframework.validation.Errors;

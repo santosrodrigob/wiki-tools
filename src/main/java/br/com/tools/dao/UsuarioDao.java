@@ -1,3 +1,7 @@
+/**
+ * @author Rodrigo Borges 
+ * @date 01/04/2020
+ */
 package br.com.tools.dao;
 
 import java.util.List;

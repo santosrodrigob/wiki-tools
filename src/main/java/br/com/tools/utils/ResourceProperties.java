@@ -1,3 +1,7 @@
+/**
+ * @author RodrigoBorges.
+ * @date alter 01/03/2020
+ */
 package br.com.tools.utils;
 
 import java.util.Properties;
