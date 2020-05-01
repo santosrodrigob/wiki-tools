@@ -43,11 +43,11 @@
 		        		</div>
 						<div class="col-md-6">
 		        			<label for="usuario">Nome Usuário</label>
-		        			<input name="usuario" id="usuario" class="form-control" value="${usuario.usuario}" />
+		        			<input type="text" name="usuario" id="usuario" class="form-control" value="${usuario.usuario}" />
 		        		</div>
 						<div class="col-md-2">
 		        			<label for="senha">Senha</label>
-		        			<input name="senha" id="senha" class="form-control" value="${usuario.senha}" />
+		        			<input type="password" name="senha" id="senha" class="form-control" value="${usuario.senha}" />
 		        		</div>
 	        		</div>
         		</div>
@@ -57,7 +57,8 @@
 		        			<label for="codigoAcessoWiki">Acesso</label>
 		        			<select name="codigoAcessoWiki" id="codigoAcessoWiki" class="form-control" >
 		        				<option value="0" ${0 == usuario.codigoAcesso ? 'selected' : '' }>Selecione...</option>
-		        				<option value="1" ${1 == usuario.codigoAcesso ? 'selected' : '' }>ADMIN</option>
+		        				<option value="1" ${1 == usuario.codigoAcesso ? 'selected' : '' }>ADMIN(1)</option>
+		        				<option value="2" ${2 == usuario.codigoAcesso ? 'selected' : '' }>USER(2)</option>
 		        			</select>
 		        		</div>
 						<div class="col-md-3">

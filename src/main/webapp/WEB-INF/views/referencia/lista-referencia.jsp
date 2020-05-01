@@ -25,7 +25,7 @@
 			<span class="message">${message}</span>
 		</div>
 		<div class="title">
-			<h3>Lista - Referências</h3>
+			<h3>Lista Referências</h3>
 		</div>
 
         <main>
@@ -35,7 +35,7 @@
 					<input id="pesquisa" name="pesquisa" placeholder="Pesquisar" class="form-control right"/>
 				</div>
 	        	<table class="table table-striped">
-	        		<thead class="text-center">
+	        		<thead class="thead-dark text-center">
 		        		<tr>
 		        			<th scope="col">Código</th>
 		        			<th scope="col">Referência</th>
@@ -47,7 +47,7 @@
 	        		</thead>
 	        		<tbody>
 	        			<c:forEach items="${referencias}" var="referencia">
-	        			<tr class="trs">
+	        			<tr class="trs text-center">
 		        			<th class="id" scope="row">${referencia.codigoReferencia}</th>
 		        			<td class="referencia">${referencia.descricaoReferencia}</td>
 		        			<td class="dataAlteracao">${referencia.dataAlteracaoFormatada}</td>

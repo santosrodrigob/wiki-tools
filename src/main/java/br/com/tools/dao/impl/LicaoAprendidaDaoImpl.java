@@ -27,11 +27,11 @@ public class LicaoAprendidaDaoImpl implements LicaoAprendidaDao {
 		query.append("	l.cliente, ");
 		query.append("	l.erro, ");
 		query.append("	l.solucao, ");
-		query.append("	concat(r.referencia, '(', l.codigo_referencia, ')') as referencia, ");
-		query.append("	concat(s.sub_referencia, '(', l.codigo_sub_referencia, ')') as sub_referencia, ");
-		query.append("	concat(ifnull(t.usuario, ' - '), '(', l.codigo_tecnico, ')') as tecnico, ");
+		query.append("	r.referencia, ");
+		query.append("	s.sub_referencia, ");
+		query.append("	ifnull(t.usuario, ' - ') as tecnico, ");
 		query.append("	ifnull(l.data_alteracao, l.data_criacao) as data, ");
-		query.append("	ifnull(concat(a.usuario, '(', l.codigo_usuario_alteracao, ')'), concat(c.usuario, '(', l.codigo_usuario_criacao, ')')) as usuario_alteracao, ");
+		query.append("	ifnull(a.usuario, c.usuario) as usuario_alteracao, ");
 		query.append("	ifnull(l.inativo, 0) as inativo ");
 		query.append("from ");
 		query.append("	tb_licao_aprendida l ");

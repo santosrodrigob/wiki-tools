@@ -47,7 +47,7 @@
         			<div class="row">
 		        		<div class="col-md-6">
 		        			<label for="senha">Senha</label>
-		        			<form:input path="senha" class="form-control"/>
+		        			<form:password path="senha" class="form-control"/>
 		        			<form:errors path="senha" class="errors"/>
 		        		</div>
 		        		<div class="col-md-5">
@@ -55,6 +55,7 @@
 		        			<form:select path="codigoAcessoWiki" class="form-control" >
 		        				<option value="0">Selecione...</option>
 		        				<form:option value="1" selected="selected" >ADMIN(1)</form:option>
+		        				<form:option value="2" >USER(2)</form:option>
 		        			</form:select>
 		        			<form:errors path="codigoAcessoWiki" class="errors"/>
 		        		</div>

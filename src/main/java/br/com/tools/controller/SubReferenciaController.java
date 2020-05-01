@@ -91,8 +91,8 @@ public class SubReferenciaController {
 		List<SubReferencia> subReferencias = subReferenciaDTO.getSubReferencias();
 		subReferencias = subReferencias
 		.stream()
-		.sorted(Comparator.comparing(l -> l.getDescricaoReferencia()))
 		.sorted(Comparator.comparing(l -> l.getDescricaoSubReferencia()))
+		.sorted(Comparator.comparing(l -> l.getDescricaoReferencia()))
 		.collect(Collectors.toList());
 
 		model.addAttribute(ConstantDataManager.OBJETO_LISTA_SUB_REFERENCIAS, subReferencias);

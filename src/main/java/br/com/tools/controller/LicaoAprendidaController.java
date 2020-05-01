@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -112,7 +113,10 @@ public class LicaoAprendidaController {
 		}
 		
 		List<LicaoAprendida> licoes = licaoAprendidaDTO.getLicoes();
-		licoes.sort(Comparator.comparing(l -> l.getDescricaoSubReferencia()));
+		licoes = licoes.stream()
+		.sorted(Comparator.comparing(l -> l.getCliente()))
+		.sorted(Comparator.comparing(l -> l.getDescricaoSubReferencia()))
+		.collect(Collectors.toList());
 
 		model.addAttribute(ConstantDataManager.OBJETO_LISTA_LICAO_APRENDIDA, licoes);
 		return modelAndView;

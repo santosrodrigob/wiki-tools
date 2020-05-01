@@ -37,10 +37,9 @@
 					<input id="pesquisa" name="pesquisa" placeholder="Pesquisar" class="form-control right"/>
 				</div>
 	        	<table class="table table-striped">
-	        		<thead class="text-center">
+	        		<thead class="thead-dark text-center">
 		        		<tr>
-		        			<th scope="col">#</th>
-		        			<th scope="col">SubReferência</th>
+		        			<th scope="col">Refs</th>
 		        			<th scope="col">Erro</th>
 		        			<th scope="col">Cliente/Técnico</th>
 		        			<th scope="col">Solução</th>
@@ -53,7 +52,6 @@
 	        		<tbody>
 	        			<c:forEach items="${licoes}" var="licao">
 	        			<tr class="trs">
-		        			<th class="id" scope="row">${licao.id}</th>
 		        			<td class="subReferencia">${licao.descricaoSubReferencia}</td>
 		        			<td class="erro">${licao.erro}</td>
 		        			<td class="usuario">${licao.cliente}  ${licao.usuario }</td>

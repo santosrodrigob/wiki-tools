@@ -10,7 +10,7 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title>Lista - Sub-Referências</title>
+        <title>Lista - Usuários</title>
         
 	    <link href="${assets }/plugins/bootstrap-4.4.1-dist/css/bootstrap.min.css.map"/>
 	    <link href="${assets }/plugins/bootstrap-4.4.1-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -25,7 +25,7 @@
 			<span class="message">${message}</span>
 		</div>
 		<div class="title">
-			<h3>Lista - Sub-Referências</h3>
+			<h3>Lista Usuários</h3>
 		</div>
 
         <main>
@@ -35,9 +35,8 @@
 					<input id="pesquisa" name="pesquisa" placeholder="Pesquisar" class="form-control right"/>
 				</div>
 	        	<table class="table table-striped">
-	        		<thead class="text-center">
+	        		<thead class="thead-dark text-center">
 		        		<tr>
-		        			<th scope="col">#</th>
 		        			<th scope="col">Código</th>
 		        			<th scope="col">Usuário</th>
 		        			<th scope="col">Data Alteração</th>
@@ -49,7 +48,6 @@
 	        		<tbody>
 	        			<c:forEach items="${usuarios}" var="usuario">
 	        			<tr class="trs text-center">
-		        			<th class="id" scope="row">${usuario.id}</th>
 		        			<td class="codigo">${usuario.codigoUsuario}</td>
 		        			<td class="usuario">${usuario.usuario}</td>
 		        			<td class="dataAlteracao">${usuario.dataAlteracaoFormatada}</td>
