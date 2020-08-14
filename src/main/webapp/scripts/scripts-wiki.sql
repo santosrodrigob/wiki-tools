@@ -13,6 +13,30 @@ drop table tb_role;
 	select * from tb_role;
 	select * from tb_usuario;
 */
+create table if not exists `tb_equipamento`
+(
+	codigo_equipamento int auto_increment NOT NULL,
+	equipamento varchar(30) NOT NULL,
+	marca varchar(20) NULL,
+	modelo varchar(20) NULL,
+    inativo bit NULL,
+	codigo_usuario_criacao int NULL,
+	codigo_usuario_alteracao int NULL,	
+	data_criacao date NOT NULL,
+	data_alteracao date NULL,
+    primary key (codigo_equipamento)
+) Engine InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+select * from tb_equipamento;
+
+insert into tb_equipamento(equipamento, marca, modelo, data_criacao)
+select 'TERMINAL', 'WILBOR', '1.44', convert(now(), date)
+
+insert into tb_equipamento(equipamento, marca, modelo, data_criacao)
+select 'CELULAR', 'SAMSUNG', 'S8', convert(now(), date)
+
+insert into tb_equipamento(equipamento, marca, modelo, data_criacao)
+select 'CPU', 'BEMATECH', 'ALL IN ONE', convert(now(), date)
 create table if not exists `tb_role`
 (
 	codigo_acesso int auto_increment NOT NULL,

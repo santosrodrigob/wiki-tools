@@ -38,7 +38,7 @@ import br.com.tools.utils.ConstantDataManager;
 import br.com.tools.utils.StringUtils;
 
 @Controller
-@RequestMapping("usuario")
+@RequestMapping("/usuario")
 public class UsuarioController {
 
 	@RequestMapping(value = "/open", method = RequestMethod.GET)
@@ -174,7 +174,6 @@ public class UsuarioController {
 		return listar(new UsuarioDTO(), model);
 	}
 	
-
 	@RequestMapping(value = "ajaxProximo", method = RequestMethod.POST)
 	public ResponseEntity<String> getProximo(final HttpServletRequest request) {
 		
@@ -188,14 +187,14 @@ public class UsuarioController {
 		{
 			Integer codigoAtual = 0;
 
-				Connection connection = ConnectionFactory.getConnection();
-				
-				if(StringUtils.isLong(codigoAtualParameter)) {
-					codigoAtual = Integer.valueOf(codigoAtualParameter);
-				}
-				UsuarioServices usuarioServices = new UsuarioServicesImpl(connection);
-				proximo = usuarioServices.getProximoCodigo(codigoAtual);
-				result.put(ConstantDataManager.OBJETO_PROXIMO, proximo);
+			Connection connection = ConnectionFactory.getConnection();
+			
+			if(StringUtils.isLong(codigoAtualParameter)) {
+				codigoAtual = Integer.valueOf(codigoAtualParameter);
+			}
+			UsuarioServices usuarioServices = new UsuarioServicesImpl(connection);
+			proximo = usuarioServices.getProximoCodigo(codigoAtual);
+			result.put(ConstantDataManager.OBJETO_PROXIMO, proximo);
 		}
 		catch (Exception e) 
 		{

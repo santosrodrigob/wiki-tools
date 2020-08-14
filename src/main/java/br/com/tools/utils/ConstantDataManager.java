@@ -12,6 +12,7 @@ public final class ConstantDataManager
 	public static final String PONTO_VIRGULA = ";";
 	public static final String SIMPLE_ASPAS = "'";
 	public static final String ON = "on";
+	public static final String STATUS_DESCRIPTION = "status";
 
 	//Parameters gerais
 	public static final String PARAMETER_LOGIN = "login";

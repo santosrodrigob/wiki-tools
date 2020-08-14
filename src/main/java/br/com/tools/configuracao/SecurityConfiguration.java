@@ -77,9 +77,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		.antMatchers("/**").permitAll()
 		.antMatchers("/").permitAll()
 		.anyRequest().authenticated()
-		.and().formLogin().loginPage("/login").permitAll()
+		.and().formLogin().loginPage("/").permitAll()
 		.defaultSuccessUrl("/licao/open/1")
-		.and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/login")
+		.and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/")
 		.and().csrf().disable();
 	}
 }

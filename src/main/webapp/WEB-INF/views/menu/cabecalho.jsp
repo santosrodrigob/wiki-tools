@@ -66,6 +66,20 @@
 							</security:authorize>
 								<a class="dropdown-item" href="/wiki-tools/sub-referencia/lista-sub">Listar</a>
 							</div>
+						</li>						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+								role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+								<strong>Cliente Estrutura</strong>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="/wiki-tools/cliente-estrutura/open/1">Filtrar</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/wiki-tools/cliente-estrutura/open/0">Novo</a>
+<%-- 		        			<security:authorize access="isAuthenticated()">
+								<a class="dropdown-item" href="/wiki-tools/cliente-estrutura/open/0">Novo</a>
+							</security:authorize>
+ --%>								<a class="dropdown-item" href="/wiki-tools/cliente-estrutura/lista-cliente">Listar</a>
+							</div>
 						</li>
 						<!-- li class="nav-item">
 							<a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
